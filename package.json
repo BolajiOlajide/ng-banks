@@ -4,6 +4,38 @@
   "description": "Light-weight zero dependency npm package that helps get nigerian banks",
   "main": "index.js",
   "repository": "git@github.com:BolajiOlajide/ng-banks.git",
-  "author": "Bolaji Olajide <cooproton@gmail.com>",
-  "license": "MIT"
+  "author": "Bolaji Olajide",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BolajiOlajide/ng-banks/issues"
+  },
+  "keywords": [
+    "Banks",
+    "Nigerian",
+    "money",
+    "access bank",
+    "citibank",
+    "diamond bank",
+    "ecobank",
+    "enterprise bank",
+    "fidelity bank",
+    "first bank",
+    "guaranty trust bank",
+    "heritage bank",
+    "key stone bank",
+    "mainstreet bank",
+    "skye bank",
+    "stanbic ibtc bank",
+    "standard chartered bank",
+    "ng banks",
+    "nigeria",
+    "sterling bank",
+    "suntrust bank",
+    "union bank",
+    "union bank",
+    "united bank",
+    "unity bank",
+    "wema bank",
+    "zenith bank"
+  ]
 }
