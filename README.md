@@ -23,6 +23,7 @@ Now that we've gotten this out of the way here's an example
 const ngBanks = require('ng-banks');
 
 const banks = ngBanks.getBanks();
+const singleBank = ngBanks.getBank('UBA');
 ```
 
 ### License
