@@ -1,17 +1,14 @@
 const banks = require('./banks');
 
 module.exports = {
-  getBanks: function() {
+  getBanks: () => {
     return banks;
   },
   getBank: code => {
-  	let OneBank = null
-  	let allBanks = [...banks]
-  	try{
-  		allBanks.forEach( singleBank => { singleBank.code === code ? OneBank = singleBank : "Invalid bank code" })
-  		return OneBank
-  	}catch(error){
-  		return "Something went wrong"
-  	}
+
+    const result = banks.filter( bank =>  bank.code === code )
+    const singleBank = result[0] === undefined ? "A bank with this code does not exist" : result[0]
+    return singleBank
+
   }
 }
