@@ -11,7 +11,7 @@ module.exports = [
   { name: 'HERITAGE BANK PLC', code: '030', slug: 'HTB' },
   { name: 'KEY STONE BANK', code: '082', slug: 'KSB' },
   { name: 'MAINSTREET BANK', code: '014', slug: 'MSB' },
-  { name: 'POLARIS BANK LIMITED', code: '---', slug: 'PLB' },
+  { name: 'POLARIS BANK LIMITED', code: '076', slug: 'PLB' },
   { name: 'PROVIDUS BANK LIMITED', code: '101', slug: 'PVB' },
   { name: 'STANBIC IBTC BANK LTD', code: '221', slug: 'SIB' },
   { name: 'STANDARD CHARTERED BANK NIGERIA LTD', code: '068', slug: 'SCB' },
