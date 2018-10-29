@@ -1,10 +1,10 @@
 const banks = require('./banks');
 
 module.exports = {
-  getBanks: () => {
+  getBanks: function() {
     return banks;
   },
-  getBank: code => {
+  getBank: function(code) {
 
     const singleBank = banks.find( bank =>  bank.code === code )
     return singleBank

@@ -20,6 +20,6 @@ module.exports = [
   { name: 'UNITED BANK FOR AFRICA PLC', code: 'UBA' },
   { name: 'UNITY BANK PLC', code: 'UNB' },
   { name: 'WEMA BANK PLC', code: 'WEM' },
-  { name: 'ZENITH BANK PLC', code: 'ZIB' },
-  { name: 'JAIZ BANK PLC', code: 'JAIZ' }
+  { name: 'ZENITH BANK PLC', code: 'ZIB' }
 ];
+a
