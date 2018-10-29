@@ -6,8 +6,7 @@ module.exports = {
   },
   getBank: code => {
 
-    const result = banks.filter( bank =>  bank.code === code )
-    const singleBank = result[0] === undefined ? "A bank with this code does not exist" : result[0]
+    const singleBank = banks.find( bank =>  bank.code === code )
     return singleBank
 
   }
