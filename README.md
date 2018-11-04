@@ -23,7 +23,15 @@ Now that we've gotten this out of the way here's an example
 const ngBanks = require('ng-banks');
 
 const banks = ngBanks.getBanks();
+
+// get bank by slug or code
+console.log(ngBanks.getBank('EPB')); // { name: 'ENTERPRISE BANK', code: '084', slug: 'EPB' }
+console.log(ngBanks.getBank('063')); // { name: 'DIAMOND BANK PLC', code: '063', slug: 'DMB' }
 ```
+
+### CONTRIBUTORS
+
+See also the list of [contributors](https://github.com/BolajiOlajide/ng-banks/contributors) who have contributed to this project.
 
 ### License
 
