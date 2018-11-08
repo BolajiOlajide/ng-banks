@@ -36,7 +36,7 @@
     "code": "084",
     "slug": "EPB",
     "ussd": {
-      "code": "*901#"
+      "code": null
     }
   },
   {
@@ -132,7 +132,7 @@
     "code": "232",
     "slug": "STB",
     "ussd": {
-      "code": "*901#"
+      "code": "*822#"
     }
   },
   {
