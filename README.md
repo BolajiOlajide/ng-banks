@@ -2,6 +2,7 @@
 
 [![NPM](https://nodei.co/npm/ng-banks.png)](https://nodei.co/npm/ng-banks/)
 [![npm version](https://badge.fury.io/js/ng-banks.svg)](https://badge.fury.io/js/ng-banks)
+[![Build Status](https://travis-ci.org/BolajiOlajide/ng-banks.svg?branch=master)](https://travis-ci.org/BolajiOlajide/ng-banks)
 
 NG-BANKS is a lightweight zero-dependency npm package that can be used to get the list of banks in my great country, Nigeria.
 
