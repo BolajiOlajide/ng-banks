@@ -6,6 +6,9 @@
   "repository": "git@github.com:BolajiOlajide/ng-banks.git",
   "author": "Bolaji Olajide",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha --bail --ui bdd"
+  },
   "bugs": {
     "url": "https://github.com/BolajiOlajide/ng-banks/issues"
   },
@@ -24,7 +27,7 @@
     "heritage bank",
     "key stone bank",
     "mainstreet bank",
-    "skye bank",
+    "polaris bank",
     "stanbic ibtc bank",
     "standard chartered bank",
     "ng banks",
@@ -37,5 +40,9 @@
     "unity bank",
     "wema bank",
     "zenith bank"
-  ]
+  ],
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "mocha": "^5.2.0"
+  }
 }
