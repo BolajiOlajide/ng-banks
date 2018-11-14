@@ -29,7 +29,7 @@ describe('NGBank', function() {
       "code": "084",
       "slug": "EPB",
       "ussd": {
-        "code": '*901#'
+        "code": null
       }
     });
     done();
@@ -42,7 +42,7 @@ describe('NGBank', function() {
         "code": "084",
         "slug": "EPB",
         "ussd": {
-          "code": '*901#'
+          "code": null
         }
       });
     });
@@ -56,7 +56,7 @@ describe('NGBank', function() {
       "code": "084",
       "slug": "EPB",
       "ussd": {
-        "code": '*901#'
+        "code": null
       }
     });
     done();
@@ -82,7 +82,7 @@ describe('NGBank', function() {
         "code": "084",
         "slug": "EPB",
         "ussd": {
-          "code": '*901#'
+          "code": null
         }
       },
       "063": {
