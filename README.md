@@ -14,7 +14,7 @@ NG-BANKS is a lightweight zero-dependency npm package that can be used to get th
 
 ### Usage
 
-The package is very simple and as of the time of writing has only one method which is to get a list of banks, their corresponding shortcode and their base USSD code.
+The package is very simple and as of the time of writing has only one method which is to get a list of banks, their corresponding shortcode and their USSD code.
 
 The list of banks contains all banks recognized by the Central Bank of Nigeria (CBN).
 
