@@ -7,8 +7,8 @@ ngBanks.getBanks(function(err, banks) {
 });
 
 // get bank by slug or code
-console.log(ngBanks.getBank('EPB')); // { name: 'ENTERPRISE BANK', code: '084', slug: 'EPB' }
-console.log(ngBanks.getBank('063')); // { name: 'DIAMOND BANK PLC', code: '063', slug: 'DMB' }
+console.log(ngBanks.getBank('EPB')); // { name: 'ENTERPRISE BANK', code: '084', slug: 'EPB', ussd: {code: null } }
+console.log(ngBanks.getBank('063')); // { name: 'DIAMOND BANK PLC', code: '063', slug: 'DMB', ussd: {code: '*710#' } }
 ngBanks.getBank('063', function(err, bank) {
   console.log(bank);
 });
