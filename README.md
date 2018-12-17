@@ -26,8 +26,8 @@ const ngBanks = require('ng-banks');
 const banks = ngBanks.getBanks();
 
 // get bank by slug or code
-console.log(ngBanks.getBank('EPB')); // { name: 'ENTERPRISE BANK', code: '084', slug: 'EPB' }
-console.log(ngBanks.getBank('063')); // { name: 'DIAMOND BANK PLC', code: '063', slug: 'DMB' }
+console.log(ngBanks.getBank('EPB')); // { name: 'ENTERPRISE BANK', code: '084', slug: 'EPB', ussd: {code: null } }
+console.log(ngBanks.getBank('063')); // { name: 'DIAMOND BANK PLC', code: '063', slug: 'DMB', ussd: {code: '*710#' } }
 
 ngBanks.getBank('EPB', function(err, bank) {
   console.log(err, bank); // { name: 'ENTERPRISE BANK', code: '084', slug: 'EPB', ussd: {code: null } }
