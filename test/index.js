@@ -106,4 +106,17 @@ describe('NGBank', function() {
   });
 
   // TODO: add test to mock and handle JSON parsing error
+  it('should parse the banks JSON correctly', function(done) {
+    fs.readFile(process.cwd() + '/db/banks.json', 'utf8', (err, data) => {
+      const hasError = err ? true : false;
+      const parsedData = JSON.parse(data);
+      assert.deepStrictEqual(parsedData, banks);
+      assert.strictEqual(
+        hasError,
+        false,
+        'Error encountered while prsing JSON'
+      );
+    });
+    done();
+  });
 });
