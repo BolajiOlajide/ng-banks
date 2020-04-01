@@ -7,18 +7,20 @@ describe('NGBank', function() {
   let banks = [];
 
   before(function(done) {
-    banks = JSON.parse(fs.readFileSync(process.cwd() + '/db/banks.json', 'utf8'));
+    banks = JSON.parse(
+      fs.readFileSync(process.cwd() + '/db/banks.json', 'utf8')
+    );
     done();
   });
 
   it('should getbanks', function(done) {
-    assert.deepEqual(ngBanks.getBanks(), banks);
+    assert.deepStrictEqual(ngBanks.getBanks(), banks);
     done();
   });
 
   it('should getbanks with callback', function(done) {
     ngBanks.getBanks(function(err, data) {
-      assert.deepEqual(data, banks);
+      assert.deepStrictEqual(data, banks);
       done();
     });
   });
@@ -98,10 +100,23 @@ describe('NGBank', function() {
   });
 
   it('should have empty memory', function(done) {
-    assert.equal(ngBanks.reset(), true)
-    assert.deepEqual(ngBanks.store, {});
+    assert.strictEqual(ngBanks.reset(), true);
+    assert.deepStrictEqual(ngBanks.store, {});
     done();
   });
 
   // TODO: add test to mock and handle JSON parsing error
+  it('should parse the banks JSON correctly', function(done) {
+    fs.readFile(process.cwd() + '/db/banks.json', 'utf8', (err, data) => {
+      const hasError = err ? true : false;
+      const parsedData = JSON.parse(data);
+      assert.deepStrictEqual(parsedData, banks);
+      assert.strictEqual(
+        hasError,
+        false,
+        'Error encountered while prsing JSON'
+      );
+    });
+    done();
+  });
 });
