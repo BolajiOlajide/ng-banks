@@ -4,7 +4,7 @@
 [![npm version](https://badge.fury.io/js/ng-banks.svg)](https://badge.fury.io/js/ng-banks)
 [![Build Status](https://travis-ci.org/BolajiOlajide/ng-banks.svg?branch=master)](https://travis-ci.org/BolajiOlajide/ng-banks)
 
-NG-BANKS is a lightweight zero-dependency npm package that can be used to get the list of banks in my great country, Nigeria.
+NG-BANKS is a lightweight zero-dependency npm package that can be used to get the [list](https://www.cbn.gov.ng/Supervision/Inst-DM.asp) of banks in my great country, Nigeria.
 
 ## Installation
 
@@ -26,14 +26,14 @@ const ngBanks = require('ng-banks');
 const banks = ngBanks.getBanks();
 
 // get bank by slug or code
-console.log(ngBanks.getBank('EPB')); // { name: 'ENTERPRISE BANK', code: '084', slug: 'EPB', ussd: {code: null } }
-console.log(ngBanks.getBank('063')); // { name: 'DIAMOND BANK PLC', code: '063', slug: 'DMB', ussd: {code: '*710#' } }
+console.log(ngBanks.getBank('EBN')); // { name: 'ECOBANK NIGERIA PLC', code: '050', slug: 'EBN', ussd: {code: '*326#' } }
+console.log(ngBanks.getBank('063')); // { name: 'ACCESS(DIAMOND) BANK PLC', code: '063', slug: 'DMB', ussd: {code: '*710#' } }
 
-ngBanks.getBank('EPB', function(err, bank) {
-  console.log(err, bank); // { name: 'ENTERPRISE BANK', code: '084', slug: 'EPB', ussd: {code: null } }
+ngBanks.getBank('EBN', function(err, bank) {
+  console.log(err, bank); // { name: 'ECOBANK NIGERIA PLC', code: '050', slug: 'EBN', ussd: {code: '*326#' } }
 });
 ngBanks.getBank('063', function(err, bank) {
-  console.log(err, bank); // { name: 'DIAMOND BANK PLC', code: '063', slug: 'DMB', ussd: {code: '*710#' } }
+  console.log(err, bank); // { name: 'ACCESS(DIAMOND) BANK PLC', code: '063', slug: 'DMB', ussd: {code: '*710#' } }
 });
 ```
 

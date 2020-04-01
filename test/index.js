@@ -24,39 +24,39 @@ describe('NGBank', function() {
   });
 
   it('should getbank', function(done) {
-    assert.deepEqual(ngBanks.getBank('EPB'), {
-      "name": "ENTERPRISE BANK",
-      "code": "084",
-      "slug": "EPB",
+    assert.deepEqual(ngBanks.getBank('EBN'), {
+      "name": "ECOBANK NIGERIA PLC",
+      "code": "050",
+      "slug": "EBN",
       "ussd": {
-        "code": null
+        "code": "*326#"
       }
     });
     done();
   });
 
   it('should getbank with callback', function(done) {
-    ngBanks.getBank('EPB', function(err, data) {
+    ngBanks.getBank('EBN', function(err, data) {
       assert.deepEqual(data, {
-        "name": "ENTERPRISE BANK",
-        "code": "084",
-        "slug": "EPB",
+        "name": "ECOBANK NIGERIA PLC",
+        "code": "050",
+        "slug": "EBN",
         "ussd": {
-          "code": null
+          "code": "*326#"
         }
       });
     });
     done();
   });
 
-  it('should have getbank in memory [EPB]', function(done) {
-    ngBanks.getBank('EPB');
-    assert.deepEqual(ngBanks.store['EPB'], {
-      "name": "ENTERPRISE BANK",
-      "code": "084",
-      "slug": "EPB",
+  it('should have getbank in memory [EBN]', function(done) {
+    ngBanks.getBank('EBN');
+    assert.deepEqual(ngBanks.store['EBN'], {
+      "name": "ECOBANK NIGERIA PLC",
+      "code": "050",
+      "slug": "EBN",
       "ussd": {
-        "code": null
+        "code": "*326#"
       }
     });
     done();
@@ -65,7 +65,7 @@ describe('NGBank', function() {
   it('should have getbank in memory [063]', function(done) {
     ngBanks.getBank('063');
     assert.deepEqual(ngBanks.store['063'], {
-      "name": "DIAMOND BANK PLC",
+      "name": "ACCESS(DIAMOND) BANK PLC",
       "code": "063",
       "slug": "DMB",
       "ussd": {
@@ -75,18 +75,18 @@ describe('NGBank', function() {
     done();
   });
 
-  it('should have both [EPB] and [063] in memory', function(done) {
+  it('should have both [EBN] and [063] in memory', function(done) {
     assert.deepEqual(ngBanks.store, {
-      "EPB": {
-        "name": "ENTERPRISE BANK",
-        "code": "084",
-        "slug": "EPB",
+      "EBN": {
+        "name": "ECOBANK NIGERIA PLC",
+        "code": "050",
+        "slug": "EBN",
         "ussd": {
-          "code": null
+          "code": "*326#"
         }
       },
       "063": {
-        "name": "DIAMOND BANK PLC",
+        "name": "ACCESS(DIAMOND) BANK PLC",
         "code": "063",
         "slug": "DMB",
         "ussd": {

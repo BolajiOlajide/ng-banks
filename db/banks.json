@@ -16,7 +16,7 @@
     }
   },
   {
-    "name": "DIAMOND BANK PLC",
+    "name": "ACCESS(DIAMOND) BANK PLC",
     "code": "063",
     "slug": "DMB",
     "ussd": {
@@ -29,14 +29,6 @@
     "slug": "EBN",
     "ussd": {
       "code": "*326#"
-    }
-  },
-  {
-    "name": "ENTERPRISE BANK",
-    "code": "084",
-    "slug": "EPB",
-    "ussd": {
-      "code": null
     }
   },
   {
@@ -64,6 +56,14 @@
     }
   },
   {
+    "name": "GLOBUS BANK LTD",
+    "code": null,
+    "slug": "GLB",
+    "ussd": {
+      "code": null
+    }
+  },
+  {
     "name": "GUARANTY TRUST BANK PLC",
     "code": "058",
     "slug": "GTB",
@@ -84,15 +84,7 @@
     "code": "082",
     "slug": "KSB",
     "ussd": {
-      "code": "*533#"
-    }
-  },
-  {
-    "name": "MAINSTREET BANK",
-    "code": "014",
-    "slug": "MSB",
-    "ussd": {
-      "code": null
+      "code": "*7111#"
     }
   },
   {
@@ -139,6 +131,14 @@
     "name": "SUNTRUST BANK NIGERIA LTD",
     "code": "100",
     "slug": "SBN",
+    "ussd": {
+      "code": null
+    }
+  },
+  {
+    "name": "TITAN TRUST BANK LTD",
+    "code": null,
+    "slug": "TTB",
     "ussd": {
       "code": null
     }
