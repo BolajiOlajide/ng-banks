@@ -26,39 +26,39 @@ describe('NGBank', function() {
   });
 
   it('should getbank', function(done) {
-    assert.deepStrictEqual(ngBanks.getBank('EPB'), {
-      name: 'ENTERPRISE BANK',
-      code: '084',
-      slug: 'EPB',
-      ussd: {
-        code: null
+    assert.deepEqual(ngBanks.getBank('EBN'), {
+      "name": "ECOBANK NIGERIA PLC",
+      "code": "050",
+      "slug": "EBN",
+      "ussd": {
+        "code": "*326#"
       }
     });
     done();
   });
 
   it('should getbank with callback', function(done) {
-    ngBanks.getBank('EPB', function(err, data) {
-      assert.deepStrictEqual(data, {
-        name: 'ENTERPRISE BANK',
-        code: '084',
-        slug: 'EPB',
-        ussd: {
-          code: null
+    ngBanks.getBank('EBN', function(err, data) {
+      assert.deepEqual(data, {
+        "name": "ECOBANK NIGERIA PLC",
+        "code": "050",
+        "slug": "EBN",
+        "ussd": {
+          "code": "*326#"
         }
       });
     });
     done();
   });
 
-  it('should have getbank in memory [EPB]', function(done) {
-    ngBanks.getBank('EPB');
-    assert.deepStrictEqual(ngBanks.store['EPB'], {
-      name: 'ENTERPRISE BANK',
-      code: '084',
-      slug: 'EPB',
-      ussd: {
-        code: null
+  it('should have getbank in memory [EBN]', function(done) {
+    ngBanks.getBank('EBN');
+    assert.deepEqual(ngBanks.store['EBN'], {
+      "name": "ECOBANK NIGERIA PLC",
+      "code": "050",
+      "slug": "EBN",
+      "ussd": {
+        "code": "*326#"
       }
     });
     done();
@@ -66,33 +66,33 @@ describe('NGBank', function() {
 
   it('should have getbank in memory [063]', function(done) {
     ngBanks.getBank('063');
-    assert.deepStrictEqual(ngBanks.store['063'], {
-      name: 'DIAMOND BANK PLC',
-      code: '063',
-      slug: 'DMB',
-      ussd: {
-        code: '*710#'
+    assert.deepEqual(ngBanks.store['063'], {
+      "name": "ACCESS(DIAMOND) BANK PLC",
+      "code": "063",
+      "slug": "DMB",
+      "ussd": {
+        "code": "*710#"
       }
     });
     done();
   });
 
-  it('should have both [EPB] and [063] in memory', function(done) {
-    assert.deepStrictEqual(ngBanks.store, {
-      EPB: {
-        name: 'ENTERPRISE BANK',
-        code: '084',
-        slug: 'EPB',
-        ussd: {
-          code: null
+  it('should have both [EBN] and [063] in memory', function(done) {
+    assert.deepEqual(ngBanks.store, {
+      "EBN": {
+        "name": "ECOBANK NIGERIA PLC",
+        "code": "050",
+        "slug": "EBN",
+        "ussd": {
+          "code": "*326#"
         }
       },
-      '063': {
-        name: 'DIAMOND BANK PLC',
-        code: '063',
-        slug: 'DMB',
-        ussd: {
-          code: '*710#'
+      "063": {
+        "name": "ACCESS(DIAMOND) BANK PLC",
+        "code": "063",
+        "slug": "DMB",
+        "ussd": {
+          "code": "*710#"
         }
       }
     });
