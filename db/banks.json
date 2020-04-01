@@ -31,14 +31,6 @@
       "code": "*326#"
     }
   },
-  // {
-  //   "name": "ENTERPRISE BANK",
-  //   "code": "084",
-  //   "slug": "EPB",
-  //   "ussd": {
-  //     "code": null
-  //   }
-  // },
   {
     "name": "FIDELITY BANK PLC",
     "code": "070",
@@ -95,14 +87,6 @@
       "code": "*7111#"
     }
   },
-  // {
-  //   "name": "MAINSTREET BANK",
-  //   "code": "014",
-  //   "slug": "MSB",
-  //   "ussd": {
-  //     "code": null
-  //   }
-  // },
   {
     "name": "POLARIS BANK LIMITED",
     "code": "076",
