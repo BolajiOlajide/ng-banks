@@ -18,3 +18,10 @@ See [commit history on Github](https://github.com/BolajiOlajide/ng-banks/commits
 - add callback functionality - giving the user ability to fetch response via callbacks or normally
 - make use of a `json` data store instead of just a script
 - add helper functions to the NGBanks class
+
+## v1.3.0 - 2018-01-09
+
+- remove non-existent banks
+- update the database to reflect new banks
+- add CBN bank lists to README for future reference
+- update tests to use proper assertions
