@@ -1,5 +1,5 @@
 const fs = require('fs');
-
+const banksDB = require("./db/banks.json");
 
 /**
  * `NGBanks`.
@@ -15,7 +15,7 @@ function NGBanks() {
   this.error = null;
 
   try {
-    this.banks = JSON.parse(fs.readFileSync('./db/banks.json', 'utf8'));
+    this.banks = banksDB;
   } catch(e) {
     this.error = e;
   }
