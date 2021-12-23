@@ -9,6 +9,12 @@
   "scripts": {
     "test": "mocha --bail --ui bdd"
   },
+  "files": [
+    "db",
+    "index.js",
+    "package.json",
+    "yarn.lock"
+  ],
   "bugs": {
     "url": "https://github.com/BolajiOlajide/ng-banks/issues"
   },
