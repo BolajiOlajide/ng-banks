@@ -1,18 +1,9 @@
 const assert = require('assert');
-const fs = require('fs');
 
 const ngBanks = require('..');
+const banks = require('../db/banks.json');
 
 describe('NGBank', function() {
-  let banks = [];
-
-  before(function(done) {
-    banks = JSON.parse(
-      fs.readFileSync(process.cwd() + '/db/banks.json', 'utf8')
-    );
-    done();
-  });
-
   it('should getbanks', function(done) {
     assert.deepStrictEqual(ngBanks.getBanks(), banks);
     done();
@@ -102,21 +93,6 @@ describe('NGBank', function() {
   it('should have empty memory', function(done) {
     assert.strictEqual(ngBanks.reset(), true);
     assert.deepStrictEqual(ngBanks.store, {});
-    done();
-  });
-
-  // TODO: add test to mock and handle JSON parsing error
-  it('should parse the banks JSON correctly', function(done) {
-    fs.readFile(process.cwd() + '/db/banks.json', 'utf8', (err, data) => {
-      const hasError = err ? true : false;
-      const parsedData = JSON.parse(data);
-      assert.deepStrictEqual(parsedData, banks);
-      assert.strictEqual(
-        hasError,
-        false,
-        'Error encountered while prsing JSON'
-      );
-    });
     done();
   });
 });
