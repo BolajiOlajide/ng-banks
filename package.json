@@ -23,6 +23,13 @@
     "package.json",
     "README.md"
   ],
+  "maintainers": [
+    {
+      "name": "Bolaji Olajide",
+      "url": "https://bolaji.de",
+      "email": "25608335+BolajiOlajide@users.noreply.github.com"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/BolajiOlajide/ng-banks/issues"
   },
