@@ -2,12 +2,20 @@
   "name": "ng-banks",
   "version": "1.3.2",
   "description": "Light-weight zero dependency npm package that helps get nigerian banks",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "umd": "lib/index.umd.js",
+  "types": "lib/index.d.ts",
   "repository": "git@github.com:BolajiOlajide/ng-banks.git",
   "author": "Bolaji Olajide",
   "license": "MIT",
   "scripts": {
-    "test": "mocha --bail --ui bdd"
+    "prebuild": "rm -rf lib",
+    "build": "yarn build:declaration && yarn build:rollup",
+    "build:declaration": "tsc",
+    "build:rollup": "rollup -c rollup.config.ts",
+    "example": "ts-node example",
+    "test": "jest"
   },
   "files": [
     "db",
@@ -50,7 +58,18 @@
     "zenith bank"
   ],
   "devDependencies": {
-    "assert": "^1.4.1",
-    "mocha": "^9.1.3"
+    "@babel/preset-env": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.8",
+    "babel": "^6.23.0",
+    "jest": "^27.4.7",
+    "rollup": "^2.63.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
   }
 }

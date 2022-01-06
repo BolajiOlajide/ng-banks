@@ -1,4 +1,6 @@
-[
+import type { Bank } from './types';
+
+const banks: Array<Bank> = [
   {
     "name": "ACCESS BANK PLC",
     "code": "044",
@@ -183,4 +185,6 @@
       "code": "*966#"
     }
   }
-]
+];
+
+export default banks;
