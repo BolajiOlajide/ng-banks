@@ -1,0 +1,103 @@
+name: ng-banks CI (Release)
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'What kind of version bump do you want to release? Accepted versions: major | minor | patch'
+        required: true
+
+jobs:
+  setup:
+    runs-on: ubuntu-18.04
+
+    if: github.event.inputs.version == 'major' || github.event.inputs.version == 'minor' || github.event.inputs.version == 'patch'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
+      - uses: actions/cache@v2
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn
+
+  test:
+    needs: setup
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14.x
+
+    - name: Load node_modules
+      uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+    - name: Run tests
+      run: yarn test
+
+  publish:
+    name: "Publish new major version"
+    needs: test
+    runs-on: ubuntu-latest
+
+    if: github.repository_owner == 'BolajiOlajide'
+
+    env:
+      NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14.x
+
+    - name: Load node_modules
+      uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+    - name: Build
+      run: yarn build
+
+    # In order to make a commit, we need to initialize a user.
+    # You may choose to write something less generic here if you want, it doesn't matter functionality wise.
+    - name: Initialize mandatory git config
+      run: |
+        git config user.name "BolajiOlajide"
+        git config user.email "25608335+BolajiOlajide@users.noreply.github.com"
+
+    - name: Bump to next ${{github.event.inputs.version}} version
+      run: yarn version --${{github.event.inputs.version}}
+
+    - name: get-npm-version
+      id: package-version
+      uses: martinbeentjes/npm-get-version-action@master
+
+    - name: Publish to NPMJS with yarn
+      run: yarn publish --access public
+      env:
+        NODE_AUTH_TOKEN: NPM_AUTH_TOKEN
+
+    - name: Push git tag and updated package.json
+      run: |
+        git commit --amend --no-edit
+        git push origin main
+        git push origin v${{steps.package-version.outputs.current-version}}

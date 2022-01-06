@@ -1,7 +1,7 @@
-const ngBanks = require('./');
+import ngBanks from '.';
 
 // get all banks
-console.log(ngBanks.getBanks());
+console.log(ngBanks.getBanks())
 ngBanks.getBanks(function(err, banks) {
   console.log(err, banks);
 });
