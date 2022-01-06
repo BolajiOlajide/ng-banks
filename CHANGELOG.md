@@ -2,6 +2,10 @@
 
 See [commit history on Github](https://github.com/BolajiOlajide/ng-banks/commits/master) for change history
 
+## v2.0.0 - 2021-01-06
+
+- Migrate project to typescript
+
 ## v1.0.0 - 2017-03-10
 
 - Add generic banks to the package
