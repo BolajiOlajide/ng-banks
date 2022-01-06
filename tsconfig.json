@@ -13,5 +13,5 @@
     "lib": ["es2017"],
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "lib", "__tests__"]
+  "exclude": ["node_modules", "lib", "__tests__", "*.config.ts"]
 }
