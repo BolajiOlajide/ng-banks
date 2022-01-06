@@ -1,7 +1,7 @@
 import banks from './banks';
 import { isCallback, isNumber } from './utils';
 
-import type { Bank } from './types';
+import type { Bank, Callback } from './types';
 
 class NGBanks {
   private _cache: Record<string, Bank> = {};
@@ -14,10 +14,10 @@ class NGBanks {
   /**
    * `.getBanks`
    *
-   * @param {Function} callback
+   * @param {Callback} callback
    * @return {Array|Function}
    */
-  public getBanks(callback?: Function): Array<Bank> | Function {
+  public getBanks(callback?: Callback<Array<Bank>>): Array<Bank> | void {
     if (callback && isCallback(callback)) {
       return callback(null, this.store);
     }
@@ -29,10 +29,10 @@ class NGBanks {
    * `.getBank`
    *
    * @param {String} param
-   * @param {Function} callback
+   * @param {Callback} callback
    * @return {Object|Function}
    */
-  public getBank(codeOrSlug: string, callback?: Function): Bank | undefined {
+  public getBank(codeOrSlug: string, callback?: Callback<Bank>): void | Bank | undefined {
     if (!codeOrSlug) {
       return undefined;
     }

@@ -8,3 +8,5 @@ export interface Bank {
 interface USSD {
   code: string | null;
 }
+
+export type Callback<T> = (err: Error | null, data: T) => void;
