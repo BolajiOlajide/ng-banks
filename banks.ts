@@ -118,7 +118,7 @@ const banks: Array<Bank> = [
     slug: "EKONDO-MFB",
     code: "562",
     ussd: {
-      code: null,
+      code: "*614*178#",
     },
   },
   {
