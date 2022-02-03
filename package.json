@@ -80,6 +80,6 @@
     "typescript": "4.5.4"
   },
   "prettier": {
-    "singleQuote": true
+    "singleQuote": false
   }
 }
