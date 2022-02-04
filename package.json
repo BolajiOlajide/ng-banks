@@ -1,6 +1,6 @@
 {
   "name": "ng-banks",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Light-weight zero dependency npm package that helps get nigerian banks",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
