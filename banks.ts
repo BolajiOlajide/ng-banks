@@ -35,7 +35,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "ALAT BY WEMA",
-    slug: "ALAT-BY-WEMA",
+    slug: "ALAT",
     code: "035A",
     ussd: {
       code: "*945#",
@@ -43,7 +43,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "AMJU UNIQUE MFB",
-    slug: "AMJU-MFB",
+    slug: "AMJU",
     code: "50926",
     ussd: {
       code: "*723*306#",
@@ -51,7 +51,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "ASO SAVINGS AND LOANS",
-    slug: "ASOSAVINGS",
+    slug: "ASO",
     code: "401",
     ussd: {
       code: null,
@@ -59,7 +59,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "BAINESCREDIT MFB",
-    slug: "BAINESCREDIT-MFB",
+    slug: "BCM",
     code: "51229",
     ussd: {
       code: null,
@@ -67,7 +67,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "BOWEN MICROFINANCE BANK",
-    slug: "BOWEN-MFB",
+    slug: "BOWEN",
     code: "50931",
     ussd: {
       code: "*614*314#",
@@ -83,7 +83,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "CEMCS MICROFINANCE BANK",
-    slug: "CEMCS-MFB",
+    slug: "CEMCS",
     code: "50823",
     ussd: {
       code: null,
@@ -115,7 +115,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "EKONDO MICROFINANCE BANK",
-    slug: "EKONDO-MFB",
+    slug: "EKD",
     code: "562",
     ussd: {
       code: "*614*178#",
@@ -139,7 +139,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "FIRMUS MFB",
-    slug: "FIRMUS-MFB",
+    slug: "FIR",
     code: "51314",
     ussd: {
       code: "*322*365#",
@@ -195,7 +195,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "HACKMAN MICROFINANCE BANK",
-    slug: "HACKMAN-MFB",
+    slug: "HACKMAN",
     code: "51251",
     ussd: {
       code: null,
@@ -203,7 +203,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "HASAL MICROFINANCE BANK",
-    slug: "HASAL-MFB",
+    slug: "HASAL",
     code: "50383",
     ussd: {
       code: "*322#",
@@ -219,7 +219,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "IBILE MICROFINANCE BANK",
-    slug: "IBILE-MFB",
+    slug: "IBILE",
     code: "51244",
     ussd: {
       code: "*614*317#",
@@ -227,7 +227,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "INFINITY MFB",
-    slug: "INFINITY-MFB",
+    slug: "INFINITY",
     code: "50457",
     ussd: {
       code: null,
@@ -235,7 +235,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "JAIZ BANK",
-    slug: "JAIZ-BANK",
+    slug: "JAIZ",
     code: "301",
     ussd: {
       code: "*773#",
@@ -243,7 +243,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "KADPOLY MFB",
-    slug: "KADPOLY-MFB",
+    slug: "KADPOLY",
     code: "50502",
     ussd: {
       code: null,
@@ -259,7 +259,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "KREDI MONEY MFB LTD",
-    slug: "KREDI-MFB",
+    slug: "KREDI",
     code: "50200",
     ussd: {
       code: null,
@@ -267,7 +267,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "KUDA BANK",
-    slug: "KUD",
+    slug: "KUDA",
     code: "50211",
     ussd: {
       code: "*945#",
@@ -275,7 +275,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "LAGOS BUILDING INVESTMENT COMPANY PLC.",
-    slug: "LBIC-PLC",
+    slug: "LBIC",
     code: "90052",
     ussd: {
       code: null,
@@ -283,7 +283,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "LINKS MFB",
-    slug: "LINKS-MFB",
+    slug: "LINKS",
     code: "50549",
     ussd: {
       code: null,
@@ -291,7 +291,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "LOTUS BANK",
-    slug: "LTS",
+    slug: "LOTUS",
     code: "303",
     ussd: {
       code: "*5045#",
@@ -299,7 +299,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "MAYFAIR MFB",
-    slug: "MYFAIR-MFB",
+    slug: "MYFAIR",
     code: "50563",
     ussd: {
       code: null,
@@ -307,7 +307,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "MINT MFB",
-    slug: "MINT-MFB",
+    slug: "MINT",
     code: "50304",
     ussd: {
       code: null,
@@ -355,7 +355,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "PETRA MIRCOFINANCE BANK PLC",
-    slug: "PETRA-MFB",
+    slug: "PETRA",
     code: "50746",
     ussd: {
       code: null,
@@ -379,7 +379,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "QUICKFUND MFB",
-    slug: "QUICKFUND-MFB",
+    slug: "QFM",
     code: "51293",
     ussd: {
       code: null,
@@ -387,7 +387,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "RAND MERCHANT BANK",
-    slug: "RAND-MERCHANT-BANK",
+    slug: "RAND",
     code: "502",
     ussd: {
       code: null,
@@ -395,7 +395,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "RUBIES MFB",
-    slug: "RUBIES-MFB",
+    slug: "RUBIES",
     code: "125",
     ussd: {
       code: "*7797#",
@@ -403,7 +403,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "SPARKLE MICROFINANCE BANK",
-    slug: "SPARKLE-MFB",
+    slug: "SPARKLE",
     code: "51310",
     ussd: {
       code: null,
@@ -443,7 +443,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "TAJ BANK",
-    slug: "TAJ-BANK",
+    slug: "TAJ",
     code: "302",
     ussd: {
       code: "*898#",
@@ -451,7 +451,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "TANGERINE MONEY",
-    slug: "TANGERINE-MONEY",
+    slug: "TNG",
     code: "51269",
     ussd: {
       code: null,
@@ -459,7 +459,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "TCF MFB",
-    slug: "TCF-MFB",
+    slug: "TCF",
     code: "51211",
     ussd: {
       code: "*908#",
@@ -467,7 +467,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "TITAN BANK",
-    slug: "TITAN-BANK",
+    slug: "TITAN",
     code: "102",
     ussd: {
       code: "*922#",
@@ -475,7 +475,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "UNICAL MFB",
-    slug: "UNICAL-MFB",
+    slug: "UNICAL",
     code: "50871",
     ussd: {
       code: null,
@@ -523,7 +523,7 @@ const banks: Array<Bank> = [
   },
   {
     name: "ZENITH BANK",
-    slug: "ZENITH-BANK",
+    slug: "ZNB",
     code: "057",
     ussd: {
       code: "*966#",
