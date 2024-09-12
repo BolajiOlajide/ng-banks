@@ -9,7 +9,8 @@ on:
 
 jobs:
   setup:
-    runs-on: ubuntu-18.04
+    # runs-on: ubuntu-18.04
+    runs-on: self-hosted
 
     if: github.event.inputs.version == 'major' || github.event.inputs.version == 'minor' || github.event.inputs.version == 'patch'
 
@@ -31,7 +32,8 @@ jobs:
 
   test:
     needs: setup
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v2
@@ -53,7 +55,8 @@ jobs:
   publish:
     name: "Publish new major version"
     needs: test
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     if: github.repository_owner == 'BolajiOlajide'
 
