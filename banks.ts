@@ -314,6 +314,32 @@ const banks: Array<Bank> = [
     },
   },
   {
+    //https://ibank.accessbankplc.com/gateway/api/nip-transfer/get-all-banks
+    name: "MONIEPOINT MICROFINANCE BANK",
+        
+    //slug and code =>https://gist.github.com/donejeh/591f2739d986d7ae6338ea2921d03cf4
+    slug: "moniepoint-mfb-ng",
+    code: "50515",
+    
+    ussd: {
+      //source https://moniepoint.com/ng/moniepoint-ussd
+      code: "*5573#",
+    },
+  },
+  {    
+    //source https://ibank.accessbankplc.com/gateway/api/nip-transfer/get-all-banks
+    name: "OPAY DIGITAL SERVICES LIMITED",
+    
+    //slug and code =>https://gist.github.com/donejeh/591f2739d986d7ae6338ea2921d03cf4
+    slug: "paycom",
+    code: "999992",
+
+    ussd: {
+      // source: https://x.com/OPay_NG/status/1778836588501377159?mx=2
+      code: "*955#",
+    },
+  },
+  {
     name: "PAGA",
     slug: "PAGA",
     code: "100002",
